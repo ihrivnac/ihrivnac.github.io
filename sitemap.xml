@@ -3,158 +3,205 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ihrivnac.github.io/download/</loc>
+    <loc>/installation/examples/examples-old/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/examples/examples-old/</loc>
+    <loc>/download/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/geometry-definition-navigation/</loc>
+    <loc>/user-guide/geant4_vmc/geometry-definition-navigation/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/geant3/geant3-old/</loc>
+    <loc>/installation/geant3/geant3-old/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/geant4_vmc/geant4_vmc-old/</loc>
+    <loc>/installation/geant4_vmc/geant4_vmc-old/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/vmc/</loc>
+    <loc>/installation/vmc/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/magnetic-field/</loc>
+    <loc>/user-guide/geant4_vmc/magnetic-field/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/support/mailing-list/</loc>
+    <loc>/support/mailing-list/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/support/bug-reports/</loc>
+    <loc>/publications/publications-list/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/</loc>
+    <loc>/download/tar-files/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/geant3/</loc>
+    <loc>/user-guide/vmc/vmc-concept/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/geant4_vmc/special-installations/</loc>
+    <loc>/examples/vmc-examples/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/geant4_vmc/</loc>
+    <loc>/support/bug-reports/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/installation/examples/</loc>
+    <loc>/examples/experiment-frameworks/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/sensitive-volumes/</loc>
+    <loc>/installation/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/vmc/</loc>
+    <loc>/installation/geant3/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/examples/</loc>
+    <loc>/installation/geant4_vmc/special-installations/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/physics-lists/</loc>
+    <loc>/download/git-vmc/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/</loc>
+    <loc>/user-guide/vmc/vmc-library/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/stacking-of-particles/</loc>
+    <loc>/download/git-geant3/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant3&#43;vmc/</loc>
+    <loc>/installation/geant4_vmc/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/g4root/</loc>
+    <loc>/installation/examples/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/special-cuts-and-regions/</loc>
+    <loc>/user-guide/vmc/multiple-vmc/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/mtroot/</loc>
+    <loc>/user-guide/geant4_vmc/sensitive-volumes/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/user-geant4-classes/</loc>
+    <loc>/user-guide/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/publications/meetings/</loc>
+    <loc>/user-guide/vmc/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/publications/</loc>
+    <loc>/examples/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/visualization/</loc>
+    <loc>/download/git-geant4_vmc/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/support/</loc>
+    <loc>/user-guide/geant4_vmc/physics-lists/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/switching-user-interfaces/</loc>
+    <loc>/user-guide/geant4_vmc/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/multi-threaded-processing/</loc>
+    <loc>/user-guide/geant4_vmc/stacking-of-particles/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/verbosity/</loc>
+    <loc>/user-guide/geant3&#43;vmc/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/vebosity-for-developers/</loc>
+    <loc>/user-guide/g4root/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/geant4_vmc/source-code-documentation/</loc>
+    <loc>/user-guide/geant4_vmc/special-cuts-and-regions/</loc>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/_multiple/</loc>
+    <loc>/user-guide/mtroot/</loc>
+  </url>
+  
+  <url>
+    <loc>/user-guide/geant4_vmc/user-geant4-classes/</loc>
+  </url>
+  
+  <url>
+    <loc>/publications/meetings/</loc>
+  </url>
+  
+  <url>
+    <loc>/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>/user-guide/geant4_vmc/visualization/</loc>
+  </url>
+  
+  <url>
+    <loc>/support/</loc>
+  </url>
+  
+  <url>
+    <loc>/user-guide/geant4_vmc/switching-user-interfaces/</loc>
+  </url>
+  
+  <url>
+    <loc>/user-guide/geant4_vmc/multi-threaded-processing/</loc>
+  </url>
+  
+  <url>
+    <loc>/user-guide/geant4_vmc/verbosity/</loc>
+  </url>
+  
+  <url>
+    <loc>/user-guide/geant4_vmc/vebosity-for-developers/</loc>
+  </url>
+  
+  <url>
+    <loc>/user-guide/geant4_vmc/source-code-documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/categories/</loc>
+    <loc>/copyright/</loc>
+  </url>
+  
+  <url>
+    <loc>/credits/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ihrivnac.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ihrivnac.github.io/</loc>
+    <loc>/</loc>
   </url>
   
 </urlset>

@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>VMC</title>
-    <link>https://ihrivnac.github.io/examples/</link>
-    <description>Recent content on VMC</description>
+    <title>Examples on VMC</title>
+    <link>/examples/</link>
+    <description>Recent content in Examples on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://ihrivnac.github.io/examples/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/examples/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VMC Examples</title>
+      <link>/examples/vmc-examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/examples/vmc-examples/</guid>
+      <description>Several simple examples of usage of VMC are included in geant4_vmc. In spite of being provided within Geant4 VMC, they are built independently and do not require Geant4 installation in case you want to run them with GEANT3 or FLUKA only. See more details on the VMC Examples  web page.</description>
+    </item>
+    
+    <item>
+      <title>Experiment Frameworks</title>
+      <link>/examples/experiment-frameworks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/examples/experiment-frameworks/</guid>
+      <description>The VMC is used in large experiment frameworks.
+AliRoot, O2 AliRoot, the ALICE software framework, can be given as a complex example of usage of VMC. See more details at The ALICE Off-line Project  
+Add links/info to O2.
+FairRoot Add links to FairRoot.</description>
+    </item>
     
   </channel>
 </rss>
