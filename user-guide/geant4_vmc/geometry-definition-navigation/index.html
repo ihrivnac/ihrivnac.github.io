@@ -12,20 +12,20 @@
     <title>Geometry Definition &amp; Navigation :: VMC</title>
 
     
-    <link href="/css/nucleus.css?1565357006" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565357006" rel="stylesheet">
-    <link href="/css/hybrid.css?1565357006" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565357006" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565357006" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565357006" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565357006" rel="stylesheet">
-    <link href="/css/theme.css?1565357006" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565357006" rel="stylesheet">
+    <link href="/css/nucleus.css?1565374203" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565374203" rel="stylesheet">
+    <link href="/css/hybrid.css?1565374203" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565374203" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565374203" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565374203" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565374203" rel="stylesheet">
+    <link href="/css/theme.css?1565374203" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565374203" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1565357006" rel="stylesheet">
+      <link href="/css/theme-blue.css?1565374203" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565357006"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565374203"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565357006"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565357006"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565374203"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565374203"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565357006"></script>
+<script type="text/javascript" src="/js/search.js?1565374203"></script>
 
     
   </div>
@@ -1181,7 +1181,20 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#geometry-definition">Geometry definition</a></li>
+<li><a href="#useful-commands">Useful commands</a></li>
+<li><a href="#geometry-in-xml">Geometry in XML</a></li>
+<li><a href="#many-positions">&ldquo;MANY&rdquo; positions</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1205,69 +1218,82 @@
 
 
 
-<p>The VMC support two ways of geometry definition:</p>
+
+
+<h3 id="geometry-definition">Geometry definition</h3>
+
+<p>The VMC supports two ways of geometry definition:</p>
+
 <ul>
-    <li>via <a href="ftp://root.cern.ch/root/doc/chapter19.pdf">           Root geometry package (TGeo) </a></li>
-    <li>via <a href="../../../../../../../root/htmldoc/TVirtualMC.html">            TVirtualMC interface </a>  (historically the first way)</li>
+<li>via <a href="http://root.cern.ch/root/doc/chapter19.pdf">Root geometry package (TGeo)</a></li>
+<li>via <a href="https://root.cern/doc/master/classTVirtualMC.html">TVirtualMC interface</a> (historically the first way)</li>
 </ul>
-<p>The first (newer) way is recommended for new users, the way via VMC is kept for   a backward compatibility.</p>
-<p>Since the version 2.0, user can choose between Geant4 native navigation and G4Root navigation, if geometry is define via TGeo. The choice of the navigation is done via the option specified with creating <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RunConfiguration.html">  TG4RunConfiguration </a> object (see   <a href="http://ivana.home.cern.ch/ivana/examples_html/index.html">  examples </a> for more details):</p>
+
+<p>The first (newer) way is recommended for new users, the way via VMC is kept for a backward compatibility.</p>
+
+<p>Since the version 2.0, user can choose between Geant4 native navigation and G4Root navigation, if geometry is define via TGeo. The choice of the navigation is done via the option specified with creating <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RunConfiguration.html">  TG4RunConfiguration </a> object (see  <a href="http://ivana.home.cern.ch/ivana/examples_html/index.html">  examples </a> for more details):</p>
+
 <ul>
-    <li><font face="Courier" color="#00aa00">            <kbd><code>geomVMCtoGeant4</code></kbd> </font>  - geometry defined via VMC, G4 native navigation</li>
-    <li><font face="Courier" color="#00aa00">            <code>geomVMCtoRoot</code> </font>     - geometry defined via VMC, Root navigation</li>
-    <li><font face="Courier" color="#00aa00">            <code>geomRoot</code> </font>          - geometry defined via Root, Root navigation</li>
-    <li><font face="Courier" color="#00aa00">            <code>geomRootToGeant4</code> </font>  - geometry defined via Root, G4 native navigation</li>
-    <li><font face="Courier" color="#00aa00">           <code>geomGeant4</code> </font>        - geometry defined via Geant4, G4 native navigation</li>
+<li><code>geomVMCtoGeant4</code>   - geometry defined via VMC, G4 native navigation</li>
+<li><code>geomVMCtoRoot</code>     - geometry defined via VMC, Root navigation</li>
+<li><code>geomRoot</code>          - geometry defined via Root, Root navigation</li>
+<li><code>geomRootToGeant4</code>  - geometry defined via Root, G4 native navigation</li>
+<li><code>geomGeant4</code>        - geometry defined via Geant4, G4 native navigation</li>
 </ul>
+
 <p>Below we shortly comment the implementation of these options:</p>
+
 <ul>
-    <li><font face="Courier" color="#00aa00"><code>geomVMCtoGeant4</code> </font>  <br />
-    The interfaces to functions for geometry definitions provided by VMC were strongly inspired by Geant3; the implementation of these functions in Geant4 VMC is therefore made with use of the G3toG4 tool provided by Geant4.</li>
-    <li><font face="Courier" color="#00aa00"> <code>geomVMCtoRoot</code> </font> <br />
-    The implementation of this option uses            <a href="../../../../../../../root/htmldoc/TGeoMCGeometry.html">           TGeoMCGeometry </a> class provided in the root/vmc package. The same class is used also by TGeant3TGeo and TFluka for supporting user geometry defined via VMC.</li>
-    <li><font face="Courier" color="#00aa00"><code>geomRoot</code> </font> <br />
-    If geometry is defined via Root and G4Root navigation is selected, Geant4 VMC only converts the parameters defined in <a href="../../../../../../../root/htmldoc/TGeoMedium.html">            TGeoMedium </a> objects to Geant4 objects.</li>
-    <li><font face="Courier" color="#00aa00"><code>geomRootToGeant4</code> </font> <br />
-    The geometry defined via TGeo is converted in Geant4  geometry           using the external           <a href="http://ivana.home.cern.ch/ivana/VGM.html">           Virtual Geometry Model </a> (VGM), which has replaced the old one-way converters from Geant4 VMC (G4toXML, RootToG4), removed from Geant4 VMC with the version 1.7. In the VGM, these convertors has been generalized and improved.</li>
-    <li><font face="Courier" color="#00aa00"><code>geomGeant4</code> </font> <br />
-    User Geant4 detector construction class can be passed to Geant4 VMC via user defined run configuration class (see <a href="http://root.cern.ch/drupal/content/user-geant4-classes"> this page </a>). If Geant4 VMC is built with VGM, geometry can be exported in Root using the built-in command:<br />
-    <bash>/vgm/generateRoot 
-</bash> and reused in Geant3 or Fluka (when available) VMC simulation.</li>
-</ul>
+<li><p><code>geomVMCtoGeant4</code>:
+The interfaces to functions for geometry definitions provided by VMC were strongly inspired by Geant3; the implementation of these functions in Geant4 VMC is therefore made with use of the G3toG4 tool provided by Geant4.</li></p></li>
 
-<h3>Useful commands</h3>
+<li><p><code>geomVMCtoRoot</code>:
+The implementation of this option uses <a href="https://root.cern.ch/doc/master/classTGeoMCGeometry.html">TGeoMCGeometry</a> provided in the root/vmc package. The same class is used also by TGeant3TGeo and TFluka for supporting user geometry defined via VMC.</p></li>
 
-Geant4 VMC implements various commands which allow users to get more information about their application setup:
-<bash>/mcDet/printMaterials
+<li><p><code>geomRoot</code>:
+If geometry is defined via Root and G4Root navigation is selected, Geant4 VMC only converts the parameters defined in <a href="https://root.cern.ch/doc/master/classTGeoMedium.html">TGeoMedium</a> objects to Geant4 objects.</p></li>
+
+<li><p><code>geomRootToGeant4</code>:
+The geometry defined via TGeo is converted in Geant4 geometry using the external <a href="http://ivana.home.cern.ch/ivana/VGM.html"> Virtual Geometry Model </a> (VGM), which has replaced the old one-way converters from Geant4 VMC (G4toXML, RootToG4), removed from Geant4 VMC with the version 1.7. In the VGM, these convertors has been generalized and improved.</p></li>
+
+<li><p><code>geomGeant4</code>:
+User Geant4 detector construction class can be passed to Geant4 VMC via user defined run configuration class (see <a href="/user-guide/geant4_vmc/user-geant4-classes">User Geant4 Classes</a>). If Geant4 VMC is built with VGM, geometry can be exported in Root using the built-in command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/vgm/generateRoot</code></pre></div>
+<p>and reused in Geant3 or Fluka (when available) VMC simulation.</p>
+
+<h3 id="useful-commands">Useful commands</h3>
+
+<p>Geant4 VMC implements various commands which allow users to get more information about their application setup:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcDet/printMaterials
 /mcDet/printMaterialsProperties
 /mcDet/printMedia
-/mcDet/printVolumes
-   prints materials, material properties, tracking media, volumes
-</bash>
+/mcDet/printVolumes</code></pre></div></li>
+</ul>
 
-<p>
-In Geant4 VMC, there is by default set a step limit 10 cm for all materials with density lower than 0.001 g/cm3. In the development version (SVN trunk), this default setting can be overridden via the following commands:
-<bash>/mcDet/setLimitDensity 1.e-6 g/cm3
-/mcDet/setMaxStepInLowDensityMaterials 1 mm
-</bash>
+<p>prints materials, material properties, tracking media, volumes</p>
 
-<p>
-How to apply Geant4 commands in a Root user session is explained at the section on <a href="/drupal/content/user-interfaces"> User Interfaces</a>. 
+<p>In Geant4 VMC, there is by default set a step limit 10 cm for all materials with density lower than 0.001 g/cm3. This default setting can be overridden via the following commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcDet/setLimitDensity <span style="color:#ae81ff">1</span>.e-6 g/cm3
+/mcDet/setMaxStepInLowDensityMaterials <span style="color:#ae81ff">1</span> mm</code></pre></div>
+<p>How to apply Geant4 commands in a Root user session is explained at the section on <a href="/user-guide/geant4_vmc/switching-user-interfaces">Switching User Interfaces</a>.</p>
 
-<h3>Geometry in XML</h3>
-<p>The VGM provides also the XML exporters which enable to generate XML files with geometry description in the AGDD or GDML formats. If Geant4 VMC is compiled with USE_VGM option, geometry can be exported to XML using the built-in commands: </p>
-<bash>
-/vgm/generateAGDD [volumeName]
-/vgm/generateGDML [volumeName]
-</bash>
-If volumeName is not specified, the whole geometry volume tree is exported.</p>
-<p>The geometry can be then browsed and visualized using  <a href="http://hrivnac.home.cern.ch/hrivnac/Activities/Packages/GraXML">  GraXML tool </a>.</p>
+<h3 id="geometry-in-xml">Geometry in XML</h3>
 
-<p><h3>&ldquo;MANY&rdquo; positions</h3>
+<p>The VGM provides also the XML exporters which enable to generate XML files with geometry description in the AGDD or GDML formats. If Geant4 VMC is compiled with USE_VGM option, geometry can be exported to XML using the built-in commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/vgm/generateAGDD <span style="color:#f92672">[</span>volumeName<span style="color:#f92672">]</span>
+/vgm/generateGDML <span style="color:#f92672">[</span>volumeName<span style="color:#f92672">]</span></code></pre></div>
+<p>If volumeName is not specified, the whole geometry volume tree is exported.
+The geometry can be then browsed and visualized using  <a href="http://hrivnac.home.cern.ch/hrivnac/Activities/Packages/GraXML">  GraXML tool </a>.</p>
+
+<h3 id="many-positions">&ldquo;MANY&rdquo; positions</h3>
+
 <p>As Geant4 does not support overlapping geometries, the positions with MANY option  are not allowed with Geant4 navigation.</p>
-<p>In case of <font face="Courier" color="#00aa00"><code>geomVMCtoGeant4</code></font> option, user has a possibility to identify all ONLY volumes that overlap with the MANY ones using TVirtualMC::Gsbool() function for each overlap. This info is then used to perform automatically Boolean operations on the concerned solids. The volume with a &ldquo;MANY&rdquo; position can have only this position if Gsbool is used.</p>
-<p>In case of <font face="Courier" color="#00aa00"><code>geomRootToGeant4</code></font> option, the MANY option is ignored and if present in geometry, Gean4 geometry will be incorrect.</p>
-<p>There is no limitation on use of the MANY option with G4Root navigation  (options <font face="Courier" color="#00aa00">            <code>geomVMCtoRoot</code></font><font face="Courier">, </font><font face="Courier" color="#00aa00">            <code>geomRoot</code></font>).</p>
+
+<p>In case of <code>geomVMCtoGeant4</code> option, user has a possibility to identify all ONLY volumes that overlap with the MANY ones using <code>TVirtualMC::Gsbool()</code> function for each overlap. This info is then used to perform automatically Boolean operations on the concerned solids. The volume with a &ldquo;MANY&rdquo; position can have only this position if Gsbool is used.</p>
+
+<p>In case of <code>geomRootToGeant4</code> option, the MANY option is ignored and if present in geometry, Gean4 geometry will be incorrect.</p>
+
+<p>There is no limitation on use of the MANY option with G4Root navigation (options <code>geomVMCtoRoot</code>, <code>geomRoot</code>).</p>
 
 
 <footer class=" footline" >
@@ -2068,20 +2094,20 @@ If volumeName is not specified, the whole geometry volume tree is exported.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565357006"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565357006"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565357006"></script>
-    <script src="/js/jquery.sticky.js?1565357006"></script>
-    <script src="/js/featherlight.min.js?1565357006"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565357006"></script>
-    <script src="/js/highlight.pack.js?1565357006"></script>
+    <script src="/js/clipboard.min.js?1565374203"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565374203"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565374203"></script>
+    <script src="/js/jquery.sticky.js?1565374203"></script>
+    <script src="/js/featherlight.min.js?1565374203"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565374203"></script>
+    <script src="/js/highlight.pack.js?1565374203"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565357006"></script>
-    <script src="/js/learn.js?1565357006"></script>
-    <script src="/js/hugo-learn.js?1565357006"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565374203"></script>
+    <script src="/js/learn.js?1565374203"></script>
+    <script src="/js/hugo-learn.js?1565374203"></script>
 
-    <link href="/mermaid/mermaid.css?1565357006" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565357006"></script>
+    <link href="/mermaid/mermaid.css?1565374203" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565374203"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

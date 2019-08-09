@@ -12,20 +12,20 @@
     <title>Vebosity :: VMC</title>
 
     
-    <link href="/css/nucleus.css?1565357006" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565357006" rel="stylesheet">
-    <link href="/css/hybrid.css?1565357006" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565357006" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565357006" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565357006" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565357006" rel="stylesheet">
-    <link href="/css/theme.css?1565357006" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565357006" rel="stylesheet">
+    <link href="/css/nucleus.css?1565374203" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565374203" rel="stylesheet">
+    <link href="/css/hybrid.css?1565374203" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565374203" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565374203" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565374203" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565374203" rel="stylesheet">
+    <link href="/css/theme.css?1565374203" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565374203" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1565357006" rel="stylesheet">
+      <link href="/css/theme-blue.css?1565374203" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565357006"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565374203"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565357006"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565357006"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565374203"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565374203"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565357006"></script>
+<script type="text/javascript" src="/js/search.js?1565374203"></script>
 
     
   </div>
@@ -1181,7 +1181,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#looping-and-problematic-tracks-h3">Looping and problematic tracks </h3></a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1205,102 +1215,92 @@
 
 
 
-<p><p>
-For many Geant4 VMC classes (like for Geant4 classes) the user can select a higher verbosity level and activate various printings which can help in understanding or debugging his application.</p>
 
-<p><p>
-<bash>/mcVerbose/all level
-</bash>
-Set the same verbose level (level &gt;= 0) to all Geant4 VMC objects. If level = 0 no printing is issued, the higher the level is more printings will be issued.</p>
 
-<p><p>
-<bash>/mcVerbose/geometryManager 2
-</bash>
-With geomRootToGeant4 option it activates the debug printing from VGM geometry conversion.</p>
+<p>For many Geant4 VMC classes (like for Geant4 classes) the user can select a higher verbosity level and activate various printings which can help in understanding or debugging his application.</p>
 
-<p><p>
-<bash>/mcVerbose/regionsManager 1 [2] [3]
-</bash><br />
 <ul>
-<li>level=1: print the number of regions added via VMC
-<li>level=2: print also the list of all volumes, the cuts in energy and calculated cuts in range
-<li>level=3: print also all evaluated energy values
-</ul></p>
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/all level</code></pre></div>
 
-<p><p>
-<bash>/mcVerbose/composedPhysicsList 2 [3] [4]
-</bash><br />
-Set the same verbose level to the registed user physics lists.
 <ul>
-<li> level=2: print the table of registered material/cuts couples
-(the range cuts and energy thresholds per material and particle)
-<li> level=3: print also info from G4VUserPhysicsList::BuildPhysicsTable for each constructed particle<br />
-<li> level=4: print also info from G4VRangeToEnergyConverter::Convert() for each material
-</ul></p>
+<li>Set the same verbose level (level &gt;= 0) to all Geant4 VMC objects. If level = 0 no printing is issued, the higher the level is more printings will be issued.</li>
+</ul></li>
 
-<p><p>
-<bash>/mcVerbose/specialPhysicsList 1 [4]
-</bash>
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/geometryManager <span style="color:#ae81ff">2</span></code></pre></div>
+
 <ul>
-<li>level=1: print info about constructed special processes
-<li>level=4: print also info from G4VRangeToEnergyConverter::Convert() for each material
-</ul></p>
+<li>Activate the debug printing from VGM geometry conversion (when geomRootToGeant4 option is selected)</li>
+</ul></li>
 
-<p><p>
-<bash>/mcVerbose/physicsExtDecayer 1 [2]
-</bash>
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/regionsManager <span style="color:#ae81ff">1</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">3</span><span style="color:#f92672">]</span></code></pre></div>
+
 <ul>
-<li> level=1: print info about the constructed external decayer
-<li> level=2: print also info about the particles which default decay was disabled by user
-</ul></p>
+<li>level=1: print the number of regions added via VMC</li>
+<li>level=2: print also the list of all volumes, the cuts in energy and calculated cuts in range</li>
+<li>level=3: print also all evaluated energy values</li>
+</ul></li>
 
-<p><p>
-<bash>/mcVerbose/primaryGeneratorAction 2
-</bash>
-Print the list of all primary particles for each event.</p>
+<li><p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/composedPhysicsList <span style="color:#ae81ff">2</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">3</span><span style="color:#f92672">]</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">4</span><span style="color:#f92672">]</span></code></pre></div>
+Set the same verbose level to the registed user physics lists.</p>
 
-<p><p>
-<bash>/mcVerbose/runAction 1
-</bash>
-Print info at the start and the end of run including the time of the run.</p>
-
-<p><p>
-<bash>/mcVerbose/eventAction 1 [2] [3]
-</bash>
 <ul>
-<li> level=1: print info at the start of event and the info about number of trajectories in the event if storing trajectories is activated
-<li> level=2: print also info at the end of event including the time of the event
-<li> level=3: print also info about the number of primary tracks processed and total number of tracks saved in stack in each event
-</ul></p>
+<li>level=2: print the table of registered material/cuts couples (the range cuts and energy thresholds per material and particle)</li>
+<li>level=3: print also info from G4VUserPhysicsList::BuildPhysicsTable for each constructed particle<br /></li>
+<li>level=4: print also info from G4VRangeToEnergyConverter::Convert() for each material</li>
+</ul></li>
 
-<p><p>
-<bash>/mcVerbose/trackingAction 2 [3]
-</bash>
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/specialPhysicsList <span style="color:#ae81ff">1</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">4</span><span style="color:#f92672">]</span></code></pre></div>
+
 <ul>
-<li> level=2: print info at the start of each 10th primary track
-<li> level=3: print also info at the start of each primary track
-</ul></p>
+<li>level=1: print info about constructed special processes</li>
+<li>level=4: print also info from G4VRangeToEnergyConverter::Convert() for each material</li>
+</ul></li>
 
-<h3> Looping and problematic tracks </h3>
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/physicsExtDecayer <span style="color:#ae81ff">1</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span></code></pre></div>
 
-<p><p>
-In order to avoid infinite looping of tracks, Geant4 VMC defines a maximum  number of steps allowed (the default value is 30000). User can customize this value by the command:
-<bash>/mcTracking/maxNofSteps value
-</bash></p>
+<ul>
+<li>level=1: print info about the constructed external decayer</li>
+<li>level=2: print also info about the particles which default decay was disabled by user</li>
+</ul></li>
 
-<p><p>
-When a track reaches the maximum number of steps, Geant4 VMC activates the tracking verbose mode and let the track process a few more steps with printing the verbose info. This can help to identify the positon of the track in the geometry hierarchy. User can change this default behavior and set the desired level of verbosity:
-<bash>/mcTracking/loopVerbose level
-</bash></p>
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/primaryGeneratorAction <span style="color:#ae81ff">2</span> </code></pre></div>
 
-<p><p>
-It is also possible to change the verbosity level for a selected track number using the commands:
-<bash>/mcTracking/newVerboseTrack trackID
-/mcTracking/newVerbose level
-</bash></p>
+<ul>
+<li>Print the list of all primary particles for each event.</li>
+</ul></li>
 
-<p><p>
-How to apply Geant4 commands in a Root user session is explained at the section on <a href="/drupal/content/user-interfaces"> User Interfaces</a>.</p>
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/runAction <span style="color:#ae81ff">1</span></code></pre></div>
+
+<ul>
+<li>Print info at the start and the end of run including the time of the run.<br /></li>
+</ul></li>
+
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/eventAction <span style="color:#ae81ff">1</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">3</span><span style="color:#f92672">]</span></code></pre></div>
+
+<ul>
+<li>level=1: print info at the start of event and the info about number of trajectories in the event if storing trajectories is activated</li>
+<li>level=2: print also info at the end of event including the time of the event</li>
+<li>level=3: print also info about the number of primary tracks processed and total number of tracks saved in stack in each event</li>
+</ul></li>
+
+<li><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcVerbose/trackingAction <span style="color:#ae81ff">2</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">3</span><span style="color:#f92672">]</span></code></pre></div>
+
+<ul>
+<li>level=2: print info at the start of each 10th primary track</li>
+<li>level=3: print also info at the start of each primary track</li>
+</ul></li>
+</ul>
+
+<h3 id="looping-and-problematic-tracks-h3">Looping and problematic tracks </h3></h3>
+
+<p>In order to avoid infinite looping of tracks, Geant4 VMC defines a maximum  number of steps allowed (the default value is 30000). User can customize this value by the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcTracking/maxNofSteps value</code></pre></div>
+<p>When a track reaches the maximum number of steps, Geant4 VMC activates the tracking verbose mode and let the track process a few more steps with printing the verbose info. This can help to identify the positon of the track in the geometry hierarchy. User can change this default behavior and set the desired level of verbosity:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcTracking/loopVerbose level</code></pre></div>
+<p>It is also possible to change the verbosity level for a selected track number using the commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcTracking/newVerboseTrack trackID
+/mcTracking/newVerbose level</code></pre></div>
+<p>How to apply Geant4 commands in a Root user session is explained at the section on <a href="/user-guide/geant4_vmc/switching-user-interfaces">Switching User Interfaces</a>.</p>
 
 
 <footer class=" footline" >
@@ -2104,20 +2104,20 @@ How to apply Geant4 commands in a Root user session is explained at the section 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565357006"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565357006"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565357006"></script>
-    <script src="/js/jquery.sticky.js?1565357006"></script>
-    <script src="/js/featherlight.min.js?1565357006"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565357006"></script>
-    <script src="/js/highlight.pack.js?1565357006"></script>
+    <script src="/js/clipboard.min.js?1565374203"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565374203"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565374203"></script>
+    <script src="/js/jquery.sticky.js?1565374203"></script>
+    <script src="/js/featherlight.min.js?1565374203"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565374203"></script>
+    <script src="/js/highlight.pack.js?1565374203"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565357006"></script>
-    <script src="/js/learn.js?1565357006"></script>
-    <script src="/js/hugo-learn.js?1565357006"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565374203"></script>
+    <script src="/js/learn.js?1565374203"></script>
+    <script src="/js/hugo-learn.js?1565374203"></script>
 
-    <link href="/mermaid/mermaid.css?1565357006" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565357006"></script>
+    <link href="/mermaid/mermaid.css?1565374203" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565374203"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
