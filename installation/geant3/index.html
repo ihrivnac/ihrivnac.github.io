@@ -12,20 +12,20 @@
     <title>Installing Geant3 :: VMC</title>
 
     
-    <link href="/css/nucleus.css?1565275253" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565275253" rel="stylesheet">
-    <link href="/css/hybrid.css?1565275253" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565275253" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565275253" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565275253" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565275253" rel="stylesheet">
-    <link href="/css/theme.css?1565275253" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565275253" rel="stylesheet">
+    <link href="/css/nucleus.css?1565357006" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565357006" rel="stylesheet">
+    <link href="/css/hybrid.css?1565357006" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565357006" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565357006" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565357006" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565357006" rel="stylesheet">
+    <link href="/css/theme.css?1565357006" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565357006" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1565275253" rel="stylesheet">
+      <link href="/css/theme-blue.css?1565357006" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565275253"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565357006"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565275253"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565275253"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565357006"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565357006"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565275253"></script>
+<script type="text/javascript" src="/js/search.js?1565357006"></script>
 
     
   </div>
@@ -286,10 +286,48 @@
           
         
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/installation/geant4_vmc/build-options/" title="Build Options" class="dd-item ">
+        <a href="/installation/geant4_vmc/build-options/">
+        Build Options
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
              
             
           
              
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/installation/geant4_vmc/required-optional-packages/" title="Required and Optional Packages" class="dd-item ">
+        <a href="/installation/geant4_vmc/required-optional-packages/">
+        Required and Optional Packages
+        
+        </a>
+    </li>
+     
+  
+ 
+
             
           
         
@@ -326,7 +364,45 @@
           
         
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/installation/examples/build-options/" title="Build Options" class="dd-item ">
+        <a href="/installation/examples/build-options/">
+        Build Options
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
              
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/installation/examples/running-examples/" title="Running examples" class="dd-item ">
+        <a href="/installation/examples/running-examples/">
+        Running examples
+        
+        </a>
+    </li>
+     
+  
+ 
+
             
           
         
@@ -1124,67 +1200,64 @@
 
 
 
-	<p>The following instructions apply to the installation since the version 2.0. For the installation of the previous versions (1.x) see <a href="/drupal/content/installing-geant3-older-versions"> Installing geant3 - Older Versions</a> page.</p>
-
-<h3>Geant3 (with VMC)</h3>
-
-<p>
-Geant3 with VMC requires ROOT.
-</p>
+	<p>Geant3 with VMC requires <a href="https://root.cern.ch/">ROOT</a>.</p>
 
 <p>Since version 2.0, Geant3 with VMC is installed with CMake. To install geant3:</p>
 
 <ol>
-    <li>First get the Geant3 source from the <a href="/drupal/content/download-vmc">Download page</a>. We will assume that the Geant3 package sits in a subdirectory
+<li><p>First get the Geant3 source from the <a href="/download/geant3">Download page</a>. We will assume that the Geant3 package sits in a subdirectory</p>
 
-<bash>/mypath/geant3
-</bash>
-    </li>
-    <li>Create build directory alongside our source directory
-    <bash>
-$ cd /mypath
+<pre><code>/mypath/geant3
+</code></pre></li>
+
+<li><p>Create build directory alongside our source directory</p>
+
+<pre><code>$ cd /mypath
 $ mkdir geant3_build
 $ ls
- geant3 geant3_build    
-</bash>
-    </li>
-    <li>To configure the build, change into the build directory and run CMake:
-    <bash>
-$ cd /mypath/geant3_build 
+geant3 geant3_build    
+</code></pre></li>
+
+<li><p>To configure the build, change into the build directory and run CMake:</p>
+
+<pre><code>$ cd /mypath/geant3_build 
 $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/geant3_install /mypath/geant3
-</bash>
-
-    <p>If ROOT environment was defined using thisroot.{c}sh script, there is no need to provide the path to its installation. Otherwise, they can be provided using -DROOT_DIR cmake option.</p>
-        <p> Since version 2.1, the Geant3 library is built by default in <code>RelWithDebInfo</code> build mode (Optimized build with debugging symbols).
-        This default can be changed via the standard CMake option CMAKE_BUILD_TYPE. The other useful values are <br>
-        <code>Release</code> : Optimized build, no debugging symbols <br>
-        <code>Debug</code> : Debugging symbols, no optimization <br>
-       </p>
-    </li>
-    <li>After the configuration has run, CMake will have generated Unix Makefiles for building Geant3. To run the build, simply execute make in the build directory:
-    <bash>
-$ make -jN
-</bash>
-    where N is the number of parallel jobs you require (e.g. if your machine has a dual core processor, you could set N to 2).
-
-    <p>If you need more output to help resolve issues or simply for information, run make as</p>
-
-    <cpp>
-$ make -jN VERBOSE=1
-</cpp>
-    </li>
-    <li>Once the build has completed, you can install Geant3 to the directory you specified earlier in CMAKE_INSTALL_PREFIX by running
-    <cpp>
-$ make install
-</cpp>
-    </li>
-</ol>
-
-<p>For the old instructions see:</p>
+</code></pre>
 
 <ul>
-<li><a href="geant3-old">Older Versions</a></li>
-</ul>
+<li><p>If ROOT environment was defined using <code>thisroot.{c}sh</code> script, there is no need to provide the path to its installation. Otherwise, they can be provided using <code>-DROOT_DIR</code> cmake option.</p></li>
+
+<li><p>Since version 2.1, the Geant3 library is built by default in <code>RelWithDebInfo</code> build mode (Optimized build with debugging symbols). This default can be changed via the standard CMake option <code>CMAKE_BUILD_TYPE</code>. The other useful values are <br></p>
+
+<ul>
+<li><code>Release</code> : Optimized build, no debugging symbols <br></li>
+<li><code>Debug</code> : Debugging symbols, no optimization <br></li>
+</ul></li>
+</ul></li>
+
+<li><p>After the configuration has run, CMake will have generated Unix Makefiles for building Geant3. To run the build, simply execute make in the build directory:</p>
+
+<pre><code>$ make -jN
+</code></pre>
+
+<p>where N is the number of parallel jobs you require (e.g. if your machine has a dual core processor, you could set N to 2).</p>
+
+<ul>
+<li><p>If you need more output to help resolve issues or simply for information, run make as</p>
+
+<pre><code>$ make -jN VERBOSE=1
+</code></pre></li>
+</ul></li>
+
+<li><p>Once the build has completed, you can install Geant3 to the directory you specified earlier in CMAKE_INSTALL_PREFIX by running</p>
+
+<pre><code>$ make install
+</code></pre></li>
+</ol>
+
+<hr>
+
+<p>The instructions above apply to the installation since the version 2.0. For the installation of the previous versions (1.x) see <a href="geant3-old">Installing geant3 - Older Versions</a></p>
 
 
 
@@ -1379,10 +1452,42 @@ $ make install
                         
             
             
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
         
                     
                         
             
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1404,6 +1509,38 @@ $ make install
                     
                         
             
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1922,20 +2059,20 @@ $ make install
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565275253"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565275253"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565275253"></script>
-    <script src="/js/jquery.sticky.js?1565275253"></script>
-    <script src="/js/featherlight.min.js?1565275253"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565275253"></script>
-    <script src="/js/highlight.pack.js?1565275253"></script>
+    <script src="/js/clipboard.min.js?1565357006"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565357006"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565357006"></script>
+    <script src="/js/jquery.sticky.js?1565357006"></script>
+    <script src="/js/featherlight.min.js?1565357006"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565357006"></script>
+    <script src="/js/highlight.pack.js?1565357006"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565275253"></script>
-    <script src="/js/learn.js?1565275253"></script>
-    <script src="/js/hugo-learn.js?1565275253"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565357006"></script>
+    <script src="/js/learn.js?1565357006"></script>
+    <script src="/js/hugo-learn.js?1565357006"></script>
 
-    <link href="/mermaid/mermaid.css?1565275253" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565275253"></script>
+    <link href="/mermaid/mermaid.css?1565357006" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565357006"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

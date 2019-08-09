@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>MTRoot :: VMC</title>
+    <title>Build Options :: VMC</title>
 
     
     <link href="/css/nucleus.css?1565357006" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/user-guide/mtroot/">
+  <body class="" data-url="/installation/geant4_vmc/build-options/">
     <nav id="sidebar" class="">
 
 
@@ -186,7 +186,7 @@
   
     
     <li data-nav-id="/installation/" title="Installation" class="dd-item 
-        
+        parent
         
         
         ">
@@ -269,7 +269,7 @@
   
     
     <li data-nav-id="/installation/geant4_vmc/" title="Installing Geant4 VMC" class="dd-item 
-        
+        parent
         
         
         ">
@@ -293,7 +293,7 @@
  
   
     
-      <li data-nav-id="/installation/geant4_vmc/build-options/" title="Build Options" class="dd-item ">
+      <li data-nav-id="/installation/geant4_vmc/build-options/" title="Build Options" class="dd-item active">
         <a href="/installation/geant4_vmc/build-options/">
         Build Options
         
@@ -429,7 +429,7 @@
   
     
     <li data-nav-id="/user-guide/" title="User Guide" class="dd-item 
-        parent
+        
         
         
         ">
@@ -876,8 +876,8 @@
   
     
     <li data-nav-id="/user-guide/mtroot/" title="MTRoot" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/user-guide/mtroot/">
@@ -1146,6 +1146,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1160,7 +1162,13 @@
             
           
           
-            <a href='/'>VMC Project</a> > <a href='/user-guide/'>User Guide</a> > MTRoot
+            
+            
+          
+          
+            <a href='/'>VMC Project</a> > <a href='/installation/'>Installation</a> > <a href='/installation/geant4_vmc/'>Installing Geant4 VMC</a> > Build Options
+          
+         
           
          
           
@@ -1171,6 +1179,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1178,40 +1193,42 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Build Options
+            </h1>
           
 
         
 
 
 
+<p>Geant4 VMC includes G4Root and MTRoot packages, which are independent from Geant4 VMC and can be build and used stand-alone. Use of G4Root, VGM, Geant4 G3toG4, UI and VIS packages in Geant4 VMC library is optional and can be switched on/off during CMake build.</p>
 
-	
+<p>Overview of available options and their default values:</p>
 
-<h3 id="chapter-3-5">Chapter 3.5</h3>
+<pre><code>Geant4VMC_BUILD_G4Root       Build G4Root        ON
+Geant4VMC_BUILD_MTRoot       Build MTRoot        ON
+Geant4VMC_BUILD_Geant4VMC    Build Geant4VMC     ON
+Geant4VMC_BUILD_EXAMPLES     Build VMC examples  ON
 
-<h1 id="mtroot">MTRoot</h1>
+Geant4VMC_USE_G4Root         Build with G4Root                ON
+Geant4VMC_USE_VGM            Build with VGM                   OFF
+Geant4VMC_USE_GEANT4_UI      Build with Geant4 UI drivers     ON
+Geant4VMC_USE_GEANT4_VIS     Build with Geant4 Vis drivers    ON
+Geant4VMC_USE_GEANT4_G3TOG4  Build with Geant4 G3toG4 library OFF
 
-<p>
-The MTRoot package (since Geant4 VMC 3.00) provides Root IO manager classes which facilitate use of ROOT IO in VMC examples and they also handle  necessary locking in multi-threaded applications. It is independent from Geant4 VMC and it is used in VMC examples. 
-</p>
-
-<p>
-See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/index.html">MTRoot </a> web page.
-</p>
-
-
-
+Geant4VMC_INSTALL_EXAMPLES   Install examples    ON
+</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1326,6 +1343,7 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
                 
                     
+                    
                 
                 
 
@@ -1340,6 +1358,9 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1378,6 +1399,7 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
                 
                     
+                    
                 
                 
 
@@ -1390,6 +1412,7 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
             
                 
+                    
                     
                 
                 
@@ -1417,144 +1440,8 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1602,6 +1489,11 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
                         
             
             
+        
+                    
+                        
+            
+            
                 
                     
                 
@@ -1614,6 +1506,104 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
                     
             
         
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -1791,6 +1781,38 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1831,7 +1853,6 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
                 
                     
-                    
                 
                 
 
@@ -1850,9 +1871,6 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1991,10 +2009,10 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
 	 
 	 
 		
-			<a class="nav nav-prev" href="/user-guide/g4root/" title="G4Root"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/installation/geant4_vmc/" title="Installing Geant4 VMC"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/examples/" title="Examples" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/installation/geant4_vmc/required-optional-packages/" title="Required and Optional Packages" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2025,3 +2043,4 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
 
   </body>
 </html>
+

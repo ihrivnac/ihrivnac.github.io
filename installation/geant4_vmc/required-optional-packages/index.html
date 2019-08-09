@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>MTRoot :: VMC</title>
+    <title>Required and Optional Packages :: VMC</title>
 
     
     <link href="/css/nucleus.css?1565357006" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/user-guide/mtroot/">
+  <body class="" data-url="/installation/geant4_vmc/required-optional-packages/">
     <nav id="sidebar" class="">
 
 
@@ -186,7 +186,7 @@
   
     
     <li data-nav-id="/installation/" title="Installation" class="dd-item 
-        
+        parent
         
         
         ">
@@ -269,7 +269,7 @@
   
     
     <li data-nav-id="/installation/geant4_vmc/" title="Installing Geant4 VMC" class="dd-item 
-        
+        parent
         
         
         ">
@@ -318,7 +318,7 @@
  
   
     
-      <li data-nav-id="/installation/geant4_vmc/required-optional-packages/" title="Required and Optional Packages" class="dd-item ">
+      <li data-nav-id="/installation/geant4_vmc/required-optional-packages/" title="Required and Optional Packages" class="dd-item active">
         <a href="/installation/geant4_vmc/required-optional-packages/">
         Required and Optional Packages
         
@@ -429,7 +429,7 @@
   
     
     <li data-nav-id="/user-guide/" title="User Guide" class="dd-item 
-        parent
+        
         
         
         ">
@@ -876,8 +876,8 @@
   
     
     <li data-nav-id="/user-guide/mtroot/" title="MTRoot" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/user-guide/mtroot/">
@@ -1146,6 +1146,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -1160,7 +1162,13 @@
             
           
           
-            <a href='/'>VMC Project</a> > <a href='/user-guide/'>User Guide</a> > MTRoot
+            
+            
+          
+          
+            <a href='/'>VMC Project</a> > <a href='/installation/'>Installation</a> > <a href='/installation/geant4_vmc/'>Installing Geant4 VMC</a> > Required and Optional Packages
+          
+         
           
          
           
@@ -1171,6 +1179,26 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#c-11">C++11</a></li>
+<li><a href="#root">ROOT</a></li>
+<li><a href="#geant4">Geant4</a></li>
+<li><a href="#vgm-optional">VGM (optional)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -1178,9 +1206,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Required and Optional Packages
+            </h1>
           
 
         
@@ -1188,30 +1219,126 @@
 
 
 
-	
 
-<h3 id="chapter-3-5">Chapter 3.5</h3>
+<p>Geant4 VMC requires <a href="https://root.cern.ch/">ROOT</a> and <a href="http://geant4.web.cern.ch/">Geant4</a> installed, and optionally, it can be built with <a href="https://github.com/vmc-project/vgm">VGM</a>. See below tips for configuration and installation of these packages.</p>
 
-<h1 id="mtroot">MTRoot</h1>
+<p>The path to required and optional packages installations can be defined in these complementary ways:</p>
 
-<p>
-The MTRoot package (since Geant4 VMC 3.00) provides Root IO manager classes which facilitate use of ROOT IO in VMC examples and they also handle  necessary locking in multi-threaded applications. It is independent from Geant4 VMC and it is used in VMC examples. 
-</p>
+<p>a) Via path to the CMake configuration file</p>
 
-<p>
-See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/index.html">MTRoot </a> web page.
-</p>
+<pre><code>Geant4_DIR      ... path to Geant4Config.cmake
+ROOT_DIR        ... path to ROOTConfig.cmake
+VGM_DIR         ... path to VGMConfig.cmake
+</code></pre>
 
+<p>b) With their configuration script available in your PATH (Geant4 and Root):</p>
 
+<pre><code>geant4-config   ... Geant4 configuration script
+root-config     ... Root configuration script
+</code></pre>
 
+<p>c) With the environment variable ROOTSYS (Root only)</p>
+
+<pre><code>ROOTSYS         ... path to Root
+</code></pre>
+
+<p>To make the packages configuration scripts available in your PATH, you should source the relevant script from the packages installations (CMAKE_INSTALL_PREFIX or ROOTSYS):</p>
+
+<pre><code>$ . bin/geant4.sh          ... Geant4 - on bourne shells (eg. bash)
+$ . bin/thisroot.sh        ... Root    
+or
+$ source bin/geant4.csh    ... Geant4 - on C shells  
+$ source bin/thisroot.csh  ... Root
+</code></pre>
+
+<h3 id="c-11">C++11</h3>
+
+<p>Geant4 VMC, as well as ROOT and Geant4, have moved to the C++11 standard.
+The latest versions of all three packages use C++11 by default:
+Geant4 VMC 3.3, Geant4 10.2 and ROOT 6.</p>
+
+<p>When mixing other versions of Geant4 and ROOT together, the same standard must
+be used for both packages. See below how the override the default setting
+when needed.</p>
+
+<h3 id="root">ROOT</h3>
+
+<p>To install ROOT - follow the <a href="http://root.cern.ch/building-root">Root Installation Page</a></p>
+
+<ul>
+<li><p><strong>C++11</strong> <br />
+Geant4 VMC 3.3 built against ROOT 5.x requires ROOT built with C++11 (not default for this ROOT version), set via:</p>
+
+<pre><code>-Dcxx11=ON
+</code></pre>
+
+<p>option, when ROOT is built using CMake, or</p>
+
+<pre><code>--enable-cxx11
+</code></pre>
+
+<p>option, when ROOT is built using configure script.</p></li>
+</ul>
+
+<h3 id="geant4">Geant4</h3>
+
+<p>To install Geant4 - download the source from <a href="http://geant4.web.cern.ch/geant4/support/download.shtml">Geant4 Download page</a> and follow the <a href="http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/index.html">Geant4 Installation Guide</a> together with the tips relevant to using it with VMC described below.</p>
+
+<ul>
+<li><p><strong>C++11</strong> <br />
+Geant4 VMC 3.0 - 3.2 built against Geant4 10.0.x or 10.1.x and ROOT 6x requires
+Geant4 built with C++11 (not default for these Geant4 versions), set via:</p>
+
+<pre><code>-DGEANT4_BUILD_CXXSTD=c++11
+</code></pre></li>
+
+<li><p><strong>G3toG4 tool</strong><br />
+The G3toG4 package is used in geant4_vmc to support geometry definition via VMC with Geant4 native navigation. The build of G3toG4 package can be activated when building Geant4 with the following CMake options:</p>
+
+<pre><code>-DGEANT4_USE_G3TOG4=ON
+</code></pre>
+
+<p>Since Geant4 VMC 3.0 the use of this package is optional.</p></li>
+
+<li><p><strong>OpenGL visualization</strong> <br>
+It is recommended to build Geant4 X11 OpenGL visualization driver used in the VMC examples. It is handled in Geant4 CMake build via the CMake option:</p>
+
+<pre><code>-DGEANT4_USE_OPENGL_X11=ON
+</code></pre></li>
+
+<li><p><strong>Multi-threading</strong> <br>
+Geant4 VMC can be built against Geant4 installation in multi-threading mode which is handled in Geant4 CMake build via the CMake option:</p>
+
+<pre><code>-DG4MULTITHREADED=ON
+</code></pre>
+
+<p>Dynamic loading of Geant4 libraries, as used in VMC, requires to change the Geant4 default TLS model, initial-exec, with global-dynamic via the CMake option:</p>
+
+<pre><code>-DGEANT4_BUILD_TLS_MODEL=global-dynamic
+</code></pre>
+
+<p>Geant4 VMC 3.00.x version is migrated to Geant4 multi-threading and can be built against both Geant4 sequential and Geant4 multi-threading installations. The global-dynamic model is required for running VMC applications from Root session (in a &ldquo;traditional&rdquo; way  with dynamic loading of libraries). When the VMC application main program is linked with all libraries, Geant4 built with the default TLS model can be used.</p>
+
+<p>The VMC application will run automatically in MT mode when Geant4 VMC is built against Geant4 MT. See <a href="https://root.cern.ch/multi-threaded-processing"> the page on Multi-threaded processing </a> how this default behaviour can be changed in the configuration of the application.</p></li>
+</ul>
+
+<h3 id="vgm-optional">VGM (optional)</h3>
+
+<p>VGM is used in Geant4 VMC for a geometry in memory conversion from Root TGeo objects to the Geant4 native geometry. This conversion is performed when users geometry is defined via the Root geometry package and Geant4 native geometry navigation is selected.</p>
+
+<p>To install VGM - follow the installation instructions on the <a href="https://github.com/vmc-project/vgm">VGM Web site</a>.</p>
+
+<p>To build Geant4 VMC with VGM, you have to select the option:</p>
+
+<pre><code>-DGeant4VMC_USE_VGM=ON
+</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -1326,6 +1453,7 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
                 
                     
+                    
                 
                 
 
@@ -1340,6 +1468,9 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1378,6 +1509,7 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
                 
                     
+                    
                 
                 
 
@@ -1390,6 +1522,9 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1417,58 +1552,6 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1483,25 +1566,6 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
                     
                         
             
@@ -1538,17 +1602,6 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
         
                     
                         
@@ -1569,6 +1622,24 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -1614,6 +1685,38 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -1791,6 +1894,38 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1831,7 +1966,6 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
                 
                     
-                    
                 
                 
 
@@ -1850,9 +1984,6 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1991,10 +2122,10 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
 	 
 	 
 		
-			<a class="nav nav-prev" href="/user-guide/g4root/" title="G4Root"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/installation/geant4_vmc/build-options/" title="Build Options"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/examples/" title="Examples" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/installation/examples/" title="Installing and Running Examples" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2025,3 +2156,4 @@ See more details on the <a href="http://ivana.home.cern.ch/ivana/mtroot_html/ind
 
   </body>
 </html>
+

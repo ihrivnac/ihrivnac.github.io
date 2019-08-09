@@ -3,6 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/installation/examples/build-options/</loc>
+  </url>
+  
+  <url>
+    <loc>/installation/geant4_vmc/build-options/</loc>
+  </url>
+  
+  <url>
     <loc>/installation/examples/examples-old/</loc>
   </url>
   
@@ -39,6 +47,10 @@
   </url>
   
   <url>
+    <loc>/installation/examples/running-examples/</loc>
+  </url>
+  
+  <url>
     <loc>/download/tar-files/</loc>
   </url>
   
@@ -68,6 +80,10 @@
   
   <url>
     <loc>/installation/geant4_vmc/special-installations/</loc>
+  </url>
+  
+  <url>
+    <loc>/installation/geant4_vmc/required-optional-packages/</loc>
   </url>
   
   <url>
