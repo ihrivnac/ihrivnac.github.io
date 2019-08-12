@@ -12,20 +12,20 @@
     <title>Tar Files :: VMC</title>
 
     
-    <link href="/css/nucleus.css?1565374203" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565374203" rel="stylesheet">
-    <link href="/css/hybrid.css?1565374203" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565374203" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565374203" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565374203" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565374203" rel="stylesheet">
-    <link href="/css/theme.css?1565374203" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565374203" rel="stylesheet">
+    <link href="/css/nucleus.css?1565614897" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565614897" rel="stylesheet">
+    <link href="/css/hybrid.css?1565614897" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565614897" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565614897" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565614897" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565614897" rel="stylesheet">
+    <link href="/css/theme.css?1565614897" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565614897" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1565374203" rel="stylesheet">
+      <link href="/css/theme-blue.css?1565614897" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565374203"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565614897"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565374203"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565374203"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565614897"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565614897"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565374203"></script>
+<script type="text/javascript" src="/js/search.js?1565614897"></script>
 
     
   </div>
@@ -1175,7 +1175,18 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#pro-versions">Pro versions</a></li>
+<li><a href="#old-versions">Old versions</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1199,56 +1210,70 @@
 
 
 
-<h3>Pro versions</h3>
 
-<table cellspacing="0" width="100%">
-    <tbody>
-        <tr>
-            <td width="15%"><font color="#00aa00" size="-0">geant3: </font></td>
-            <td width="15%"><i>version 321+_vmc.2.7 </i></td>
-            <td width="30%"><a href="https://root.cern.ch/download/vmc/geant3+_vmc.2.7.tar.gz">geant3+_vmc.2.7.tar.gz </a></td>
-            <td width="40%"><i>Tested with ROOT 6.14/06 </i></td>
-        </tr>
-        <tr>
-            <td width="15%"><font color="#00aa00" size="-0">geant4_vmc: </font></td>
-            <td width="15%"><i>version 4.0.p1 </i></td>
-            <td width="30%"><a href="https://root.cern.ch/download/vmc/geant4_vmc.4.0.p1.tar.gz">geant4_vmc.4.0.p1.tar.gz </a></td>
-            <td width="40%"><i>Tested with ROOT 6.14/06 <br />
-            Geant4 10.05<br />
-            (with embedded CLHEP 2.4.1.0),<br />
-            VGM 4.4, Garfield master at 07c0ec50a0d3086b3 (*) <br /></i>
-                        </td>
-        </tr>
-        <!-- 
-       <tr>
-            <td width="15%"><font size="-0" color="#00aa00"> fluka_vmc: </font></td>
-            <td width="15%"><i> version 0.5 </i></td>
-            <td width="30%">not distributed</td>
-            <td width="40%"><i> Tested with ROOT  5.26/00 <br />
-            FLUKA 2008.3c.vmc </i
-iteration></td>
-        </tr>
--->
-    </tbody>
+
+<h3 id="pro-versions">Pro versions</h3>
+
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Version</th>
+<th>Tar file</th>
+<th>Tested with</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>vmc</td>
+<td>0.1 (*)</td>
+<td><a href="https://github.com/vmc-project/vmc/archive/v0-1.tar.gz">v0-1.tar.gz</a></td>
+<td><em>ROOT v6.18.00</em></td>
+</tr>
+
+<tr>
+<td>geant3</td>
+<td>2.7</td>
+<td><a href="https://github.com/vmc-project/geant3/archive/v2-7.tar.gz">v2-7.tar.gz</a></td>
+<td><em>ROOT 6.14.06</em></td>
+</tr>
+
+<tr>
+<td>geant4_vmc</td>
+<td>4.0.p1</td>
+<td><a href="https://github.com/vmc-project/geant4_vmc/archive/v4-0-p1.tar.gz">v4-0-p1.tar.gz</a></td>
+<td><em>ROOT 6.14.06,<br> Geant4 10.05 (with embedded CLHEP 2.4.1.0), <br> VGM 4.4, <br> Garfield master at 07c0ec50a0d3086b3 (**)</em></td>
+</tr>
+</tbody>
 </table>
-<left>
-<p>
-(*) with fixes in MR #1 in https://gitlab.cern.ch/garfield/garfieldpp </i>
-</p>
+
+<p><em>(*) this is development version, the pro version is under construction</em></p>
+
+<p><em>(**) with fixes in MR #1 in <a href="https://gitlab.cern.ch/garfield/garfieldpp">https://gitlab.cern.ch/garfield/garfieldpp</a></em></p>
 
 <p>In general, the VMC packages can be built with the Root versions which they were tested with and higher, and Geant4 VMC with the Geant4 version which it was tested with including the patches. Note that the Geant4 patches released after the Geant4 VMC tag do not appear in the table above, it is however recommended to update Geant4 with each patch release.</p>
 
-<h3>Old versions</h3>
+<h3 id="old-versions">Old versions</h3>
 
-<table cellspacing="0" width="100%">
-    <tbody>
-        <tr>
-            <td width="15%"><font color="#00aa00" size="-0">geant3: </font></td>
-            <td width="15%"><i>version 321+_vmc.2.6 </i></td>
-            <td width="30%"><a href="https://root.cern.ch/download/vmc/geant3+_vmc.2.6.tar.gz">geant3+_vmc.2.6.tar.gz </a></td>
-            <td width="40%"><i>Tested with ROOT 5.34/38 and 6.14/06 </i></td>
-        </tr>
-    </tbody>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Version</th>
+<th>Tar file</th>
+<th>Tested with</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>geant3</td>
+<td>2.6</td>
+<td><a href="https://github.com/vmc-project/geant3/archive/v2-6.tar.gz">v2-6.tar.gz</a></td>
+<td>* ROOT 5.34.38 and 6.14.06*</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -2043,20 +2068,20 @@ iteration></td>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565374203"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565374203"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565374203"></script>
-    <script src="/js/jquery.sticky.js?1565374203"></script>
-    <script src="/js/featherlight.min.js?1565374203"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565374203"></script>
-    <script src="/js/highlight.pack.js?1565374203"></script>
+    <script src="/js/clipboard.min.js?1565614897"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565614897"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565614897"></script>
+    <script src="/js/jquery.sticky.js?1565614897"></script>
+    <script src="/js/featherlight.min.js?1565614897"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565614897"></script>
+    <script src="/js/highlight.pack.js?1565614897"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565374203"></script>
-    <script src="/js/learn.js?1565374203"></script>
-    <script src="/js/hugo-learn.js?1565374203"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565614897"></script>
+    <script src="/js/learn.js?1565614897"></script>
+    <script src="/js/hugo-learn.js?1565614897"></script>
 
-    <link href="/mermaid/mermaid.css?1565374203" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565374203"></script>
+    <link href="/mermaid/mermaid.css?1565614897" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565614897"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
