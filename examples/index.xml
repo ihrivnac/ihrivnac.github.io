@@ -16,7 +16,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/examples/vmc-examples/</guid>
-      <description>Several simple examples of usage of VMC are included in geant4_vmc. In spite of being provided within Geant4 VMC, they are built independently and do not require Geant4 installation in case you want to run them with GEANT3 or FLUKA only. See more details on the VMC Examples  web page.</description>
+      <description>A set of examples of usage of VMC is included in geant4_vmc.
+Though provided within Geant4 VMC, they can be built independently and do not require Geant4 installation in case you want to run them with GEANT3 only.
+See more details on the VMC Examples web page.</description>
     </item>
     
     <item>
@@ -25,10 +27,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/examples/experiment-frameworks/</guid>
-      <description>The VMC is used in large experiment frameworks.
-AliRoot, O2 AliRoot, the ALICE software framework, can be given as a complex example of usage of VMC. See more details at The ALICE Off-line Project  
-Add links/info to O2.
-FairRoot Add links to FairRoot.</description>
+      <description> VMC was developed by the ALICE Software Project and, since then it was adopted by other experiment frameworks.
+ALICE  AliRoot - the ALICE software framework (for LHC Run 1 and 2) O2 - the new ALICE software framework in development (for LHC Run 3 and 4)  FAIR  FairRoot - A simulation, reconstruction and analysis framework, based on the ROOT system, for FAIR experiments  </description>
     </item>
     
   </channel>

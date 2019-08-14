@@ -16,8 +16,14 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/publications/publications-list/</guid>
-      <description>The reference publication: The Virtual MonteCarlo (presentation, paper) Hřivnáčová I et al 2003 Proc. of Computing in High Energy and Nuclear Physics (La Jolla) pp THJT006 (presentation at CHEP 2003, 24 - 28 March 2003, La Jolla, California)
-All publications listed in time reversed order:   The Geant4 Virtual Monte Carlo (poster, paper) I Hřivnáčová 2012 J. Phys.: Conf. Ser. 396 022024 (poster at CHEP 2012, 21 - 25 May 2012, New York, USA) &amp;nbsp; Physics lists in Geant4 VMC  presentation at ALICE-FAIR Computing Meeting, 28-29 April 2008, GSI &amp;nbsp;  The Geant4 Virtual Monte Carlo (presentation, paper) I Hřivnáčová 2008 J.</description>
+      <description>Please refer to the paper below when publishing results base on simulations with VMC:
+Reference paper
+Hřivnáčová I et al: The Virtual MonteCarlo,
+ECONF C0303241:THJT006,2003; e-Print: cs.SE/0306005
+ All publications listed in time reversed order:
+ Geant4 VMC 3.0
+, I Hřivnáčová, A Gheata 2015 J. Phys.: Conf. Ser. 664 072020 doi: 10.1088 /1742-6596/664/7/072020
+ The Geant4 Virtual Monte Carlo I Hřivnáčová 2012 J. Phys.: Conf. Ser. 396 022024 doi:10.1088 /1742-6596/119/3/032025  Physics lists in Geant4 VMC</description>
     </item>
     
     <item>

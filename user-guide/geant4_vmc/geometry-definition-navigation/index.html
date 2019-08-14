@@ -12,20 +12,20 @@
     <title>Geometry Definition &amp; Navigation :: VMC</title>
 
     
-    <link href="/css/nucleus.css?1565614897" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565614897" rel="stylesheet">
-    <link href="/css/hybrid.css?1565614897" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565614897" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565614897" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565614897" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565614897" rel="stylesheet">
-    <link href="/css/theme.css?1565614897" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565614897" rel="stylesheet">
+    <link href="/css/nucleus.css?1565794952" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565794952" rel="stylesheet">
+    <link href="/css/hybrid.css?1565794952" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565794952" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565794952" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565794952" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565794952" rel="stylesheet">
+    <link href="/css/theme.css?1565794952" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565794952" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1565614897" rel="stylesheet">
+      <link href="/css/theme-vmc.css?1565794952" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565614897"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565794952"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
   <div id="header-wrapper">
     <div id="header">
       <a id="logo" href="">
-  <img src="/images/VMClogo6.png" width=80% />
+  <img src="/images/VMClogo6_white.png" width=80% />
 </a>
 
     </div>
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565614897"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565614897"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565794952"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565794952"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565614897"></script>
+<script type="text/javascript" src="/js/search.js?1565794952"></script>
 
     
   </div>
@@ -837,6 +837,35 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/" title="Geant3 &#43; VMC Content" class="dd-item ">
+        <a href="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/">
+        Geant3 &#43; VMC Content
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -1258,30 +1287,41 @@ The geometry defined via TGeo is converted in Geant4 geometry using the external
 
 <li><p><code>geomGeant4</code>:
 User Geant4 detector construction class can be passed to Geant4 VMC via user defined run configuration class (see <a href="/user-guide/geant4_vmc/user-geant4-classes">User Geant4 Classes</a>). If Geant4 VMC is built with VGM, geometry can be exported in Root using the built-in command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/vgm/generateRoot</code></pre></div>
+
+<pre><code class="language-bash">/vgm/generateRoot
+</code></pre>
+
 <p>and reused in Geant3 or Fluka (when available) VMC simulation.</p>
 
 <h3 id="useful-commands">Useful commands</h3>
 
 <p>Geant4 VMC implements various commands which allow users to get more information about their application setup:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcDet/printMaterials
+
+<pre><code class="language-bash">/mcDet/printMaterials
 /mcDet/printMaterialsProperties
 /mcDet/printMedia
-/mcDet/printVolumes</code></pre></div></li>
+/mcDet/printVolumes
+</code></pre></li>
 </ul>
 
 <p>prints materials, material properties, tracking media, volumes</p>
 
 <p>In Geant4 VMC, there is by default set a step limit 10 cm for all materials with density lower than 0.001 g/cm3. This default setting can be overridden via the following commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcDet/setLimitDensity <span style="color:#ae81ff">1</span>.e-6 g/cm3
-/mcDet/setMaxStepInLowDensityMaterials <span style="color:#ae81ff">1</span> mm</code></pre></div>
+
+<pre><code class="language-bash">/mcDet/setLimitDensity 1.e-6 g/cm3
+/mcDet/setMaxStepInLowDensityMaterials 1 mm
+</code></pre>
+
 <p>How to apply Geant4 commands in a Root user session is explained at the section on <a href="/user-guide/geant4_vmc/switching-user-interfaces">Switching User Interfaces</a>.</p>
 
 <h3 id="geometry-in-xml">Geometry in XML</h3>
 
 <p>The VGM provides also the XML exporters which enable to generate XML files with geometry description in the AGDD or GDML formats. If Geant4 VMC is compiled with USE_VGM option, geometry can be exported to XML using the built-in commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/vgm/generateAGDD <span style="color:#f92672">[</span>volumeName<span style="color:#f92672">]</span>
-/vgm/generateGDML <span style="color:#f92672">[</span>volumeName<span style="color:#f92672">]</span></code></pre></div>
+
+<pre><code class="language-bash">/vgm/generateAGDD [volumeName]
+/vgm/generateGDML [volumeName]
+</code></pre>
+
 <p>If volumeName is not specified, the whole geometry volume tree is exported.
 The geometry can be then browsed and visualized using  <a href="http://hrivnac.home.cern.ch/hrivnac/Activities/Packages/GraXML">  GraXML tool </a>.</p>
 
@@ -1901,6 +1941,22 @@ The geometry can be then browsed and visualized using  <a href="http://hrivnac.h
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2094,20 +2150,19 @@ The geometry can be then browsed and visualized using  <a href="http://hrivnac.h
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565614897"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565614897"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565614897"></script>
-    <script src="/js/jquery.sticky.js?1565614897"></script>
-    <script src="/js/featherlight.min.js?1565614897"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565614897"></script>
-    <script src="/js/highlight.pack.js?1565614897"></script>
+    <script src="/js/clipboard.min.js?1565794952"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565794952"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565794952"></script>
+    <script src="/js/jquery.sticky.js?1565794952"></script>
+    <script src="/js/featherlight.min.js?1565794952"></script>
+    <script src="/js/highlight.pack.js?1565794952"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565614897"></script>
-    <script src="/js/learn.js?1565614897"></script>
-    <script src="/js/hugo-learn.js?1565614897"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565794952"></script>
+    <script src="/js/learn.js?1565794952"></script>
+    <script src="/js/hugo-learn.js?1565794952"></script>
 
-    <link href="/mermaid/mermaid.css?1565614897" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565614897"></script>
+    <link href="/mermaid/mermaid.css?1565794952" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565794952"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

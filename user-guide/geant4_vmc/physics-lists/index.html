@@ -12,20 +12,20 @@
     <title>Physics Lists :: VMC</title>
 
     
-    <link href="/css/nucleus.css?1565614897" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565614897" rel="stylesheet">
-    <link href="/css/hybrid.css?1565614897" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565614897" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565614897" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565614897" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565614897" rel="stylesheet">
-    <link href="/css/theme.css?1565614897" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565614897" rel="stylesheet">
+    <link href="/css/nucleus.css?1565794952" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565794952" rel="stylesheet">
+    <link href="/css/hybrid.css?1565794952" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565794952" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565794952" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565794952" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565794952" rel="stylesheet">
+    <link href="/css/theme.css?1565794952" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565794952" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1565614897" rel="stylesheet">
+      <link href="/css/theme-vmc.css?1565794952" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565614897"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565794952"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
   <div id="header-wrapper">
     <div id="header">
       <a id="logo" href="">
-  <img src="/images/VMClogo6.png" width=80% />
+  <img src="/images/VMClogo6_white.png" width=80% />
 </a>
 
     </div>
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565614897"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565614897"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565794952"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565794952"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565614897"></script>
+<script type="text/javascript" src="/js/search.js?1565794952"></script>
 
     
   </div>
@@ -837,6 +837,35 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/" title="Geant3 &#43; VMC Content" class="dd-item ">
+        <a href="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/">
+        Geant3 &#43; VMC Content
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -1231,7 +1260,10 @@
 <p>Geant4 VMC does not provide a default physics list. User have to choose the physics list from the physics lists provided in Geant4 (see the <a href="http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/PhysicsListGuide/html/index.html">Geant4 Physics List Guide</a> or include their own physics list. The choice of the physics list is done via the option specified with creating <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RunConfiguration.html"> TG4RunConfiguration </a> object. This option is passed as<em>the second argument</em> in <code>TG4RunConfiguration</code> constructor (see <a href="examples">examples</a> for more details).</p></p>
 
 <p>This option can be defined as:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#34;&lt;g4-physics-list&gt;[_&lt;EM-option&gt;][+extra][+optical][+radDecay]&#34;</span> </code></pre></div>
+
+<pre><code class="language-bash">&quot;&lt;g4-physics-list&gt;[_&lt;EM-option&gt;][+extra][+optical][+radDecay]&quot; 
+</code></pre>
+
 <p>where</p>
 
 <ul>
@@ -1247,14 +1279,20 @@
 </ul>
 
 <p>Examples:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#34;FTFP_BERT_EMV+optical&#34;</span> 
-<span style="color:#e6db74">&#34;QGSP_BIC_EMY+radDecay&#34;</span> </code></pre></div>
+
+<pre><code class="language-bash">&quot;FTFP_BERT_EMV+optical&quot; 
+&quot;QGSP_BIC_EMY+radDecay&quot; 
+</code></pre>
+
 <p>The <code>&lt;g4-physics-list&gt;_&lt;EM-option&gt;</code> must represent a valid Geant4 physics list (except for &ldquo;emStandard&rdquo;). Since Geant4 9.5 it is possible to combine all EM options with all physics lists.</p>
 
 <h3 id="special-processes">Special processes</h3>
 
 <p>In order to activate the support of VMC features like the VMC cuts, VMC process controls, user has to activate the special processes defined in <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4SpecialPhysicsList.html">TG4SpecialPhysicsList</a>. The selection of special processes is passed as the <em>third argument</em> in <code>TG4RunConfiguration</code> constructor (see <a href="http://ivana.home.cern.ch/ivana/examples_html/index.html"> examples </a> for more details):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#34;[stepLimiter][+specialCuts][+specialControls][+stackPopper]&#34;</span> </code></pre></div>
+
+<pre><code class="language-bash">&quot;[stepLimiter][+specialCuts][+specialControls][+stackPopper]&quot; 
+</code></pre>
+
 <p>where</p>
 
 <ul>
@@ -1265,8 +1303,11 @@
 </ul>
 
 <p>Examples:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#34;stepLimit+specialCuts&#34;</span> 
-<span style="color:#e6db74">&#34;stepLimit+specialCuts+stackPopper&#34;</span> </code></pre></div>
+
+<pre><code class="language-bash">&quot;stepLimit+specialCuts&quot; 
+&quot;stepLimit+specialCuts+stackPopper&quot; 
+</code></pre>
+
 <h3 id="composed-physics-list">Composed physics list</h3>
 
 <p>According to the user selection, Geant4 VMC creates a <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4ComposedPhysicsList.html">TG4ComposedPhysicsList</a> object which is a composition of a selected Geant4 physics list (or a user physics list), the extra physics list ( <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4ExtraPhysicsList.html">TG4ExtraPhysicsList</a> - in development version only) and the <a href="http://ivana.home.cern.ch/ivana/g4vmc_htm/classTG4SpecialPhysicsList.html"> TG4SpecialPhysicsList</a> object. The inclusion of the extra physics list is optional. The composed physics list processes the Geant4 (or user) physics list in the first order, then adds the extra physics processes (if selected) and finally the special processes, registered in TG4SpecialPhysicsList, are added in the last order.</p>
@@ -1278,35 +1319,53 @@
 <p>The instantiated particles and physics processes can be the viewed with the following Geant4 and Geant4 VMC commands.</p>
 
 <p>To list all particles and processes:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/particle/list 
+
+<pre><code class="language-bash">/particle/list 
 /process/list 
-/mcPhysics/dumpAllProcess </code></pre></div>
+/mcPhysics/dumpAllProcess 
+</code></pre>
+
 <p>To inspect a selected particle:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/particle/select particleName 
+
+<pre><code class="language-bash">/particle/select particleName 
 /particle/process/dump 
 /particle/property/dump 
-/particle/property/decay/dump </code></pre></div>
+/particle/property/decay/dump 
+</code></pre>
+
 <p>To print the mapping of G4 processes to VMC process codes and VMC (G3-like) process controls:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcPhysics/printProcessMCMap 
-/mcPhysics/printProcessControlMap </code></pre></div>
+
+<pre><code class="language-bash">/mcPhysics/printProcessMCMap 
+/mcPhysics/printProcessControlMap 
+</code></pre>
+
 <h2 id="electromagnetic-physics">Electromagnetic physics</h2>
 
 <p>Users can tailor the extra physics processes provided by Geant4 via the commands defined in the <code>/physics_lists/em/</code> command directory and switch on the muon or gamma nuclear interaction, synchrotron radiation,  gamma or positron conversion to muon pair or positron conversion to hadrons processes, which are not which are not included by default:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/physics_lists/em/SyncRadiation true|false
+
+<pre><code class="language-bash">/physics_lists/em/SyncRadiation true|false
 /physics_lists/em/SyncRadiationAll true|false
 /physics_lists/em/GammaNuclear true|false 
 /physics_lists/em/MuonNuclear true|false 
 /physics_lists/em/GammaToMuons true|false 
 /physics_lists/em/PositronToMuons true|false 
-/physics_lists/em/PositronToHadrons true|false </code></pre></div>
+/physics_lists/em/PositronToHadrons true|false 
+</code></pre>
+
 <p>Users can also customize the parameters of the electromagnetic physics processes using the commands in the following directories (use interactive help to get more information):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/process/eLoss/ 
+
+<pre><code class="language-bash">/process/eLoss/ 
 /process/msc/ 
-/process/em/ </code></pre></div>
+/process/em/ 
+</code></pre>
+
 <p>Since Geant4 VMC version 2.10, it is also possible to choose an extra model of energy loss, fluctuations or multiple scattering for selected tracking media and selected particles. This can be done via the following built-in commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcPhysics/emModel/setEmModel PAI 
-/mcPhysics/emModel/setRegions trackingMedium1 <span style="color:#f92672">[</span>trackingMedium2 ...<span style="color:#f92672">]</span> 
-/mcPhysics/emModel/setParticles all </code></pre></div>
+
+<pre><code class="language-bash">/mcPhysics/emModel/setEmModel PAI 
+/mcPhysics/emModel/setRegions trackingMedium1 [trackingMedium2 ...] 
+/mcPhysics/emModel/setParticles all 
+</code></pre>
+
 <p>The <code>setRegions</code> and <code>setParticles</code> commands must be followed by the list of tracking media names and particle names respectively, separated with a blank space. The <code>setParticles</code> command can also take as a parameter the keyword <code>&quot;all&quot;</code>. The model will be then applied to all particles.</p>
 
 <p>At present, the following models are supported: PAI and PAIPhoton models which are applied to ionisation process, and SpecialUrbanMsc, a special model tuned for ALICE EMCAL detector, which is applied to e- and e+ multiple scattering processes.</p>
@@ -1314,21 +1373,30 @@
 <h3 id="hadronic-physics">Hadronic physics</h3>
 
 <p>User can activate a generation of the cross sections plots for a given projectile particle and a target element via the following commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcCrossSection/makeHistograms <span style="color:#f92672">[</span>true|false<span style="color:#f92672">]</span> 
+
+<pre><code class="language-bash">/mcCrossSection/makeHistograms [true|false] 
 /mcCrossSection/setParticle proton 
-/mcCrossSection/setElement Al</code></pre></div>
+/mcCrossSection/setElement Al
+</code></pre>
+
 <p>The default energy or momentum limits and the number of bins can be customised via the commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcCrossSection/setMinKinE <span style="color:#ae81ff">1</span> MeV 
-/mcCrossSection/setMaxKinE <span style="color:#ae81ff">1</span> TeV 
-/mcCrossSection/setMinMomentum <span style="color:#ae81ff">10</span> MeV 
-/mcCrossSection/setMaxMomentum <span style="color:#ae81ff">10</span> TeV 
-/mcCrossSection/setNofBinsE <span style="color:#ae81ff">900</span> 
-/mcCrossSection/setNofBinsP <span style="color:#ae81ff">800</span></code></pre></div>
+
+<pre><code class="language-bash">/mcCrossSection/setMinKinE 1 MeV 
+/mcCrossSection/setMaxKinE 1 TeV 
+/mcCrossSection/setMinMomentum 10 MeV 
+/mcCrossSection/setMaxMomentum 10 TeV 
+/mcCrossSection/setNofBinsE 900 
+/mcCrossSection/setNofBinsP 800
+</code></pre>
+
 <p>It is also possible to print the cross section value for a selected energy or a momentum for a selected cross section type (or all types) via the following commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcCrossSection/setParticle anti_proton 
+
+<pre><code class="language-bash">/mcCrossSection/setParticle anti_proton 
 /mcCrossSection/setElement H 
-/mcCrossSection/setMomentum <span style="color:#ae81ff">0</span>.3 GeV 
-/mcCrossSection/printCrossSection All </code></pre></div>
+/mcCrossSection/setMomentum 0.3 GeV 
+/mcCrossSection/printCrossSection All 
+</code></pre>
+
 <p>How to apply Geant4 commands in a Root user session is explained at the section on <a href="/user-guide/geant4_vmc/switching-user-interfaces">Switching User Interfaces</a>.</p>
 
 
@@ -1940,6 +2008,22 @@
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2133,20 +2217,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565614897"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565614897"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565614897"></script>
-    <script src="/js/jquery.sticky.js?1565614897"></script>
-    <script src="/js/featherlight.min.js?1565614897"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565614897"></script>
-    <script src="/js/highlight.pack.js?1565614897"></script>
+    <script src="/js/clipboard.min.js?1565794952"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565794952"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565794952"></script>
+    <script src="/js/jquery.sticky.js?1565794952"></script>
+    <script src="/js/featherlight.min.js?1565794952"></script>
+    <script src="/js/highlight.pack.js?1565794952"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565614897"></script>
-    <script src="/js/learn.js?1565614897"></script>
-    <script src="/js/hugo-learn.js?1565614897"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565794952"></script>
+    <script src="/js/learn.js?1565794952"></script>
+    <script src="/js/hugo-learn.js?1565794952"></script>
 
-    <link href="/mermaid/mermaid.css?1565614897" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565614897"></script>
+    <link href="/mermaid/mermaid.css?1565794952" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565794952"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

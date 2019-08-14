@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Build Options :: VMC</title>
+    <title>Geant3 &#43; VMC Content :: VMC</title>
 
     
     <link href="/css/nucleus.css?1565794952" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/installation/examples/build-options/">
+  <body class="" data-url="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/">
     <nav id="sidebar" class="">
 
 
@@ -186,7 +186,7 @@
   
     
     <li data-nav-id="/installation/" title="Installation" class="dd-item 
-        parent
+        
         
         
         ">
@@ -347,7 +347,7 @@
   
     
     <li data-nav-id="/installation/examples/" title="Installing and Running Examples" class="dd-item 
-        parent
+        
         
         
         ">
@@ -371,7 +371,7 @@
  
   
     
-      <li data-nav-id="/installation/examples/build-options/" title="Build Options" class="dd-item active">
+      <li data-nav-id="/installation/examples/build-options/" title="Build Options" class="dd-item ">
         <a href="/installation/examples/build-options/">
         Build Options
         
@@ -429,7 +429,7 @@
   
     
     <li data-nav-id="/user-guide/" title="User Guide" class="dd-item 
-        
+        parent
         
         
         ">
@@ -828,7 +828,7 @@
   
     
     <li data-nav-id="/user-guide/geant3&#43;vmc/" title="Geant3 &#43; VMC" class="dd-item 
-        
+        parent
         
         
         ">
@@ -852,7 +852,7 @@
  
   
     
-      <li data-nav-id="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/" title="Geant3 &#43; VMC Content" class="dd-item ">
+      <li data-nav-id="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/" title="Geant3 &#43; VMC Content" class="dd-item active">
         <a href="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/">
         Geant3 &#43; VMC Content
         
@@ -1195,7 +1195,7 @@
             
           
           
-            <a href='/'>VMC Project</a> > <a href='/installation/'>Installation</a> > <a href='/installation/examples/'>Installing and Running Examples</a> > Build Options
+            <a href='/'>VMC Project</a> > <a href='/user-guide/'>User Guide</a> > <a href='/user-guide/geant3+vmc/'>Geant3 + VMC</a> > Geant3 + VMC Content
           
          
           
@@ -1210,7 +1210,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#geant3-21">Geant3.21</a></li>
+<li><a href="#tgeant3-geant3-vmc">TGeant3 (Geant3 VMC)</a></li>
+<li><a href="#examples">Examples</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1226,7 +1238,7 @@
           
             <h1>
               
-              Build Options
+              Geant3 &#43; VMC Content
             </h1>
           
 
@@ -1234,15 +1246,31 @@
 
 
 
-<p>Overview of the available options for building VMC examples and their default values:</p>
 
-<pre><code>VMC_WITH_Geant4       Build with Geant4   OFF
-VMC_WITH_Geant3       Build with Geant3   OFF
-VMC_WITH_MTRoot       Build with MTRoot   ON
-VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
-</code></pre>
 
-<p>Geant4 VMC build options are automatically exported in <code>Geant4VMCConfig.cmake</code>. If Geant4 VMC  was built with VGM, the VGM installation path has to be provided via <code>-DVGM_DIR</code> option.</p>
+
+<div class="notices warning" ><p>Only the <strong>Geant3.21</strong> code itself and the implementation of the <a href="https://root.cern/doc/master/classTVirtualMC.html">TVirtualMC</a> interface, <strong>TGeant3</strong>, provided in <a href="https://github.com/vmc-project/geant3">geant3</a> are maintained by the VMC project.</p>
+</div>
+
+
+<h3 id="geant3-21">Geant3.21</h3>
+
+<p>The updated version of Geant3.21 that includes several bug fixes compared to the standard version in CERNLIB.
+In this version all Geant3 gxxxxx routines have been renamed g3xxxxx.</p>
+
+<p>The old <code>Makefile</code> system was replaced with a <code>CMake</code> based system since version 2.0.</p>
+
+<p>See also <a href="/geant.pdf">Geant3.21 User Guide</a></p>
+
+<h3 id="tgeant3-geant3-vmc">TGeant3 (Geant3 VMC)</h3>
+
+<p>The directory <code>TGeant3</code> contains the classes TGeant3 and TGeant3TGeo,
+which implement the  TVirtualMC interface, see more about VMC at: <br/>
+<a href="https://root.cern.ch/vmc">https://root.cern.ch/vmc</a></p>
+
+<h3 id="examples">Examples</h3>
+
+<p>The directory <code>examples</code> includes a set of FORTRAN examples. These examples are not maintained and tested in the VMC project test suites. Instead, the geant3 package is tested using the test suites defined in <a href="/examples">geant4_vmc/examples</a>.</p>
 
 
 <footer class=" footline" >
@@ -1364,7 +1392,6 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
                 
                     
-                    
                 
                 
 
@@ -1379,9 +1406,6 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1478,7 +1502,6 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
                 
                     
-                    
                 
                 
 
@@ -1491,7 +1514,6 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
             
                 
-                    
                     
                 
                 
@@ -1513,9 +1535,6 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1539,6 +1558,7 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
                 
                     
+                    
                 
                 
 
@@ -1553,6 +1573,9 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1842,6 +1865,7 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
                 
                     
+                    
                 
                 
 
@@ -1854,6 +1878,7 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
             
                 
+                    
                     
                 
                 
@@ -1873,6 +1898,9 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2046,10 +2074,10 @@ VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
 	 
 	 
 		
-			<a class="nav nav-prev" href="/installation/examples/" title="Installing and Running Examples"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/user-guide/geant3&#43;vmc/" title="Geant3 &#43; VMC"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/installation/examples/running-examples/" title="Running examples" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/user-guide/g4root/" title="G4Root" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

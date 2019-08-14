@@ -12,20 +12,20 @@
     <title>Vebosity :: VMC</title>
 
     
-    <link href="/css/nucleus.css?1565614897" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565614897" rel="stylesheet">
-    <link href="/css/hybrid.css?1565614897" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565614897" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565614897" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565614897" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565614897" rel="stylesheet">
-    <link href="/css/theme.css?1565614897" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565614897" rel="stylesheet">
+    <link href="/css/nucleus.css?1565794952" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565794952" rel="stylesheet">
+    <link href="/css/hybrid.css?1565794952" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565794952" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565794952" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565794952" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565794952" rel="stylesheet">
+    <link href="/css/theme.css?1565794952" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565794952" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1565614897" rel="stylesheet">
+      <link href="/css/theme-vmc.css?1565794952" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565614897"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565794952"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
   <div id="header-wrapper">
     <div id="header">
       <a id="logo" href="">
-  <img src="/images/VMClogo6.png" width=80% />
+  <img src="/images/VMClogo6_white.png" width=80% />
 </a>
 
     </div>
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565614897"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565614897"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565794952"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565794952"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565614897"></script>
+<script type="text/javascript" src="/js/search.js?1565794952"></script>
 
     
   </div>
@@ -837,6 +837,35 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/" title="Geant3 &#43; VMC Content" class="dd-item ">
+        <a href="/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/">
+        Geant3 &#43; VMC Content
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -1294,12 +1323,21 @@ Set the same verbose level to the registed user physics lists.</p>
 <h3 id="looping-and-problematic-tracks-h3">Looping and problematic tracks </h3></h3>
 
 <p>In order to avoid infinite looping of tracks, Geant4 VMC defines a maximum  number of steps allowed (the default value is 30000). User can customize this value by the command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcTracking/maxNofSteps value</code></pre></div>
+
+<pre><code class="language-bash">/mcTracking/maxNofSteps value
+</code></pre>
+
 <p>When a track reaches the maximum number of steps, Geant4 VMC activates the tracking verbose mode and let the track process a few more steps with printing the verbose info. This can help to identify the positon of the track in the geometry hierarchy. User can change this default behavior and set the desired level of verbosity:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcTracking/loopVerbose level</code></pre></div>
+
+<pre><code class="language-bash">/mcTracking/loopVerbose level
+</code></pre>
+
 <p>It is also possible to change the verbosity level for a selected track number using the commands:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/mcTracking/newVerboseTrack trackID
-/mcTracking/newVerbose level</code></pre></div>
+
+<pre><code class="language-bash">/mcTracking/newVerboseTrack trackID
+/mcTracking/newVerbose level
+</code></pre>
+
 <p>How to apply Geant4 commands in a Root user session is explained at the section on <a href="/user-guide/geant4_vmc/switching-user-interfaces">Switching User Interfaces</a>.</p>
 
 
@@ -1911,6 +1949,22 @@ Set the same verbose level to the registed user physics lists.</p>
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2104,20 +2158,19 @@ Set the same verbose level to the registed user physics lists.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565614897"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565614897"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565614897"></script>
-    <script src="/js/jquery.sticky.js?1565614897"></script>
-    <script src="/js/featherlight.min.js?1565614897"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565614897"></script>
-    <script src="/js/highlight.pack.js?1565614897"></script>
+    <script src="/js/clipboard.min.js?1565794952"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565794952"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565794952"></script>
+    <script src="/js/jquery.sticky.js?1565794952"></script>
+    <script src="/js/featherlight.min.js?1565794952"></script>
+    <script src="/js/highlight.pack.js?1565794952"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565614897"></script>
-    <script src="/js/learn.js?1565614897"></script>
-    <script src="/js/hugo-learn.js?1565614897"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565794952"></script>
+    <script src="/js/learn.js?1565794952"></script>
+    <script src="/js/hugo-learn.js?1565794952"></script>
 
-    <link href="/mermaid/mermaid.css?1565614897" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565614897"></script>
+    <link href="/mermaid/mermaid.css?1565794952" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565794952"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
