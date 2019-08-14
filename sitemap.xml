@@ -139,6 +139,10 @@
   </url>
   
   <url>
+    <loc>/publications/</loc>
+  </url>
+  
+  <url>
     <loc>/user-guide/geant4_vmc/stacking-of-particles/</loc>
   </url>
   
@@ -148,6 +152,10 @@
   
   <url>
     <loc>/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/</loc>
+  </url>
+  
+  <url>
+    <loc>/support/</loc>
   </url>
   
   <url>
@@ -171,15 +179,7 @@
   </url>
   
   <url>
-    <loc>/publications/</loc>
-  </url>
-  
-  <url>
     <loc>/user-guide/geant4_vmc/visualization/</loc>
-  </url>
-  
-  <url>
-    <loc>/support/</loc>
   </url>
   
   <url>

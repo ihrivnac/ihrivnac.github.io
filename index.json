@@ -238,6 +238,13 @@
 	"content": " Chapter 3.2 Geant4 VMC Geant4 VMC represents the realisation of the Virtual Monte Carlo (VMC) for Geant4. It can be also seen as a Geant4 application implemented via the VMC interfaces. It implements all Geant4 user mandatory classes and user action classes, which provide the default Geant4 VMC behaviour, that can be then customized by a user in many ways.\n Geometry Definition \u0026amp; Navigation   Magnetic Field   Sensitive Detectors and Volumes   Physics Lists   Stacking of Particles   Special Cuts and Regions   User Geant4 Classes   Visualization   Switching User Interfaces   Multi-threaded Processing   Vebosity   Vebosity for Developers   Source code documentation   "
 },
 {
+	"uri": "/publications/",
+	"title": "Publications",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 5 Publications This chapter lists the presentations \u0026amp; publication related to VMC.\n Publications List   "
+},
+{
 	"uri": "/user-guide/geant4_vmc/stacking-of-particles/",
 	"title": "Stacking of Particles",
 	"tags": [],
@@ -249,7 +256,7 @@
 	"title": "Geant3 + VMC",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 3.3 The geant3 package provided in vmc-project contains both the Geant3.21 code itself and the implementation of the TVirtualMC interface, TGeant3.\n Geant3 \u0026#43; VMC Content   "
+	"content": " Chapter 3.3 Geant3 + VMC The geant3 package provided in vmc-project contains both the Geant3.21 code itself and the implementation of the TVirtualMC interface, TGeant3.\n Geant3 \u0026#43; VMC Content   "
 },
 {
 	"uri": "/user-guide/geant3+vmc/geant3+vmc-content/",
@@ -257,6 +264,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Only the Geant3.21 code itself and the implementation of the TVirtualMC interface, TGeant3, provided in geant3 are maintained by the VMC project.\n Geant3.21 The updated version of Geant3.21 that includes several bug fixes compared to the standard version in CERNLIB. In this version all Geant3 gxxxxx routines have been renamed g3xxxxx.\nThe old Makefile system was replaced with a CMake based system since version 2.0.\nSee also Geant3.21 User Guide\nTGeant3 (Geant3 VMC) The directory TGeant3 contains the classes TGeant3 and TGeant3TGeo, which implement the TVirtualMC interface, see more about VMC at:  https://root.cern.ch/vmc\nExamples The directory examples includes a set of FORTRAN examples. These examples are not maintained and tested in the VMC project test suites. Instead, the geant3 package is tested using the test suites defined in geant4_vmc/examples.\n"
+},
+{
+	"uri": "/support/",
+	"title": "Support",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 6 Support  Mailing List   Bug Reports   "
 },
 {
 	"uri": "/user-guide/g4root/",
@@ -294,25 +308,11 @@
 	"content": " VMC meeting, CERN, 03 June 2009  \u0026nbsp; VMC meeting, CERN, 04 February 2009  \u0026nbsp; VMC Open issues meeting, CERN, 22 September 2008  \u0026nbsp; VMC Workshop, CERN, 29-30th November 2004   "
 },
 {
-	"uri": "/publications/",
-	"title": "Publications",
-	"tags": [],
-	"description": "",
-	"content": " Chapter 9 Publications This chapter lists the presentations \u0026amp; publication related to VMC.\n Publications List   "
-},
-{
 	"uri": "/user-guide/geant4_vmc/visualization/",
 	"title": "Visualization",
 	"tags": [],
 	"description": "",
 	"content": "Geant4 visualization and UI drivers can be in Geant4 VMC enabled via dedicated CMake configuration options. See more details in Installing Geant4 VMC.\nThe G3-like functions for visualization defined in TVirtualMC are overcome with the interactive visualization capabilities of both Root and Geant4 geometry modellers, that\u0026rsquo;s why user is encouraged to use these modeller directly. User can set Geant4 visualization options using Geant4 visualization commands, as it is illustrated in the VMC examples  in g4vis.in macro.\n"
-},
-{
-	"uri": "/support/",
-	"title": "Support",
-	"tags": [],
-	"description": "",
-	"content": " Chapter 10 Support  Mailing List   Bug Reports   "
 },
 {
 	"uri": "/user-guide/geant4_vmc/switching-user-interfaces/",
