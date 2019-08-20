@@ -37,9 +37,8 @@ Since the version 2.0, user can choose between Geant4 native navigation and G4Ro
       
       <guid>/user-guide/geant4_vmc/sensitive-volumes/</guid>
       <description>Sensitive Detectors Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, TVirtualMCSensitiveDetector, has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
-The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
-void TVirtualMCApplication::SetSensitiveDetectors()  using the new TVirtualMC function:
-void TVirtualMC::SetSensitiveDetector( const TString&amp;amp;amp; volumeName, TVirtualMCSensitiveDetector* userSD);  Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function</description>
+The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function: void TVirtualMCApplication::SetSensitiveDetectors() 
+using the new TVirtualMC function: void TVirtualMC::SetSensitiveDetector( const TString&amp;amp; volumeName, TVirtualMCSensitiveDetector* userSD);  Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function void VirtualMC::SetExclusiveSDScoring(Bool_t);  If exclusive scoring is selected, the MCApplication::Stepping() is not called by MC.</description>
     </item>
     
     <item>
@@ -98,7 +97,7 @@ The G3-like functions for visualization defined in TVirtualMC are overcome with 
       
       <guid>/user-guide/geant4_vmc/switching-user-interfaces/</guid>
       <description>The VMC interface provides a common denominator for all implemented MC&amp;rsquo;s and cannot cover all commands available in a Geant4 user session through Geant4 user interface (UI). Switching between the Root UI and the Geant4 UI gives a user the possibility of working with the native Geant4 UI. It is also possible to process a foreign command or a foreign macro in both UIs:
-From Root to Geant4 UI Switching UI:</description>
+From Root to Geant4 UI Switching UI: root [0] ((TGeant4*)gMC)-&amp;gt;StartGeantUI();</description>
     </item>
     
     <item>

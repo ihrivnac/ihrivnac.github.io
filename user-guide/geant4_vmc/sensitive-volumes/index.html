@@ -12,20 +12,20 @@
     <title>Sensitive Detectors and Volumes :: VMC</title>
 
     
-    <link href="/css/nucleus.css?1565795298" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565795298" rel="stylesheet">
-    <link href="/css/hybrid.css?1565795298" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565795298" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565795298" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565795298" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565795298" rel="stylesheet">
-    <link href="/css/theme.css?1565795298" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565795298" rel="stylesheet">
+    <link href="/css/nucleus.css?1566317004" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1566317004" rel="stylesheet">
+    <link href="/css/hybrid.css?1566317004" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1566317004" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1566317004" rel="stylesheet">
+    <link href="/css/auto-complete.css?1566317004" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1566317004" rel="stylesheet">
+    <link href="/css/theme.css?1566317004" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1566317004" rel="stylesheet">
     
-      <link href="/css/theme-vmc.css?1565795298" rel="stylesheet">
+      <link href="/css/theme-vmc.css?1566317004" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565795298"></script>
+    <script src="/js/jquery-3.3.1.min.js?1566317004"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565795298"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565795298"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1566317004"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1566317004"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565795298"></script>
+<script type="text/javascript" src="/js/search.js?1566317004"></script>
 
     
   </div>
@@ -1248,24 +1248,19 @@
 
 <p>Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, <a href="https://root.cern.ch/doc/master/classTVirtualMCSensitiveDetector.html">TVirtualMCSensitiveDetector</a>, has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.</p>
 
-<p>The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:</p>
+<p>The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> TVirtualMCApplication<span style="color:#f92672">::</span>SetSensitiveDetectors()
+</code></pre></div></p>
 
-<pre><code class="language-cpp">void TVirtualMCApplication::SetSensitiveDetectors()
-</code></pre>
-
-<p>using the new TVirtualMC function:</p>
-
-<pre><code class="language-cpp">void TVirtualMC::SetSensitiveDetector(
-	const TString&amp;amp; volumeName, 
-	TVirtualMCSensitiveDetector* userSD);
-</code></pre>
-
-<p>Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and <code>MCApplication::Stepping()</code> using the function</p>
-
-<pre><code class="language-cpp">void VirtualMC::SetExclusiveSDScoring(Bool_t);
-</code></pre>
-
-<p>If exclusive scoring is selected, the <code>MCApplication::Stepping()</code> is not called by MC.</p>
+<p>using the new TVirtualMC function:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> TVirtualMC<span style="color:#f92672">::</span>SetSensitiveDetector(
+	<span style="color:#66d9ef">const</span> TString<span style="color:#f92672">&amp;</span> volumeName,
+	TVirtualMCSensitiveDetector<span style="color:#f92672">*</span> userSD);
+</code></pre></div>
+Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and <code>MCApplication::Stepping()</code> using the function
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">void</span> VirtualMC<span style="color:#f92672">::</span>SetExclusiveSDScoring(Bool_t);
+</code></pre></div>
+If exclusive scoring is selected, the <code>MCApplication::Stepping()</code> is not called by MC.</p>
 
 <p>To demonstrate the usage of this new interfaces the <strong>E03 example</strong> was split in two variants:</p>
 
@@ -1293,13 +1288,12 @@
 <pre><code>/mcDet/setSDSelectionFromTGeo true
 </code></pre>
 
-<p>The volumes in TGeo geometry are set sensitive by setting the option &ldquo;SV&rdquo; to TGeoVolume objects:</p>
-
-<pre><code class="language-cpp">TGeoVolume* myVolume = ...;
-myVolume-&gt;SetOption(&quot;SV&quot;);
-</code></pre>
-
-<p>User can also choose a different string than &ldquo;SV&rdquo; for sensitive volumes labeling. In this case, they have to notify Geant4 VMC about the label via the Geant4 VMC command:</p>
+<p>The volumes in TGeo geometry are set sensitive by setting the option &ldquo;SV&rdquo; to TGeoVolume objects:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">TGeoVolume<span style="color:#f92672">*</span> myVolume <span style="color:#f92672">=</span> ...;
+myVolume<span style="color:#f92672">-&gt;</span>SetOption(<span style="color:#e6db74">&#34;SV&#34;</span>);
+   
+</code></pre></div>
+User can also choose a different string than &ldquo;SV&rdquo; for sensitive volumes labeling. In this case, they have to notify Geant4 VMC about the label via the Geant4 VMC command:</p>
 
 <pre><code>/mcDet/setSVLabel MyLabel
 </code></pre>
@@ -2125,19 +2119,19 @@ myVolume-&gt;SetOption(&quot;SV&quot;);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565795298"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565795298"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565795298"></script>
-    <script src="/js/jquery.sticky.js?1565795298"></script>
-    <script src="/js/featherlight.min.js?1565795298"></script>
-    <script src="/js/highlight.pack.js?1565795298"></script>
+    <script src="/js/clipboard.min.js?1566317004"></script>
+    <script src="/js/perfect-scrollbar.min.js?1566317004"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1566317004"></script>
+    <script src="/js/jquery.sticky.js?1566317004"></script>
+    <script src="/js/featherlight.min.js?1566317004"></script>
+    <script src="/js/highlight.pack.js?1566317004"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565795298"></script>
-    <script src="/js/learn.js?1565795298"></script>
-    <script src="/js/hugo-learn.js?1565795298"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1566317004"></script>
+    <script src="/js/learn.js?1566317004"></script>
+    <script src="/js/hugo-learn.js?1566317004"></script>
 
-    <link href="/mermaid/mermaid.css?1565795298" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565795298"></script>
+    <link href="/mermaid/mermaid.css?1566317004" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1566317004"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
